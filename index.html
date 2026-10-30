@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Learn how abortion pill effectiveness is assessed, why misoprostol may not work, what no bleeding means, and when to seek medical care.">
+  <meta name="robots" content="index,follow">
+  <title>Abortion Pill Effectiveness &amp; Misoprostol Safety Guide</title>
+  <style>
+    :root {
+      --ink: #24313a;
+      --muted: #5b6870;
+      --brand: #176b63;
+      --brand-dark: #10524d;
+      --brand-pale: #eaf5f2;
+      --line: #dce6e3;
+      --paper: #ffffff;
+      --canvas: #f4f8f7;
+      --warning: #fff5e8;
+      --warning-border: #d99035;
+      --shadow: 0 12px 34px rgba(29, 61, 57, .08);
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      background: var(--canvas);
+      color: var(--ink);
+      font: 16px/1.75 system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
+    a { color: var(--brand-dark); text-underline-offset: 3px; }
+    a:hover { color: #0a403b; }
+    .site-header {
+      background: linear-gradient(135deg, #125a54, #218477);
+      color: white;
+      padding: 20px 24px;
+    }
+    .header-inner, .layout {
+      width: min(1120px, calc(100% - 32px));
+      margin: 0 auto;
+    }
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      font-weight: 750;
+      letter-spacing: .2px;
+    }
+    .brand-mark {
+      display: grid;
+      place-items: center;
+      width: 42px;
+      height: 42px;
+      border: 1px solid rgba(255,255,255,.5);
+      border-radius: 13px;
+      background: rgba(255,255,255,.12);
+      font-size: 21px;
+    }
+    .layout {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) 250px;
+      gap: 28px;
+      align-items: start;
+      padding: 32px 0 56px;
+    }
+    main, aside {
+      background: var(--paper);
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      box-shadow: var(--shadow);
+    }
+    main { padding: clamp(22px, 4vw, 48px); min-width: 0; }
+    aside { padding: 22px; position: sticky; top: 18px; }
+    .eyebrow {
+      color: var(--brand);
+      text-transform: uppercase;
+      letter-spacing: .12em;
+      font-size: .78rem;
+      font-weight: 800;
+      margin: 0 0 10px;
+    }
+    h1, h2, h3 { line-height: 1.25; letter-spacing: -.025em; }
+    h1 { font-size: clamp(2rem, 4.5vw, 3.15rem); margin: 0 0 18px; }
+    h2 {
+      font-size: clamp(1.45rem, 2.6vw, 1.9rem);
+      margin: 44px 0 16px;
+      padding-top: 8px;
+    }
+    h3 { font-size: 1.18rem; margin: 26px 0 10px; }
+    p { margin: 0 0 16px; }
+    .intro { font-size: 1.08rem; color: #3e4d55; }
+    .meta-row { display: flex; flex-wrap: wrap; gap: 8px; margin: 18px 0 28px; }
+    .chip {
+      background: var(--brand-pale);
+      color: var(--brand-dark);
+      border: 1px solid #d4e9e3;
+      border-radius: 999px;
+      padding: 5px 11px;
+      font-size: .83rem;
+      font-weight: 650;
+    }
+    .callout {
+      margin: 24px 0;
+      padding: 18px 20px;
+      border-left: 4px solid var(--brand);
+      background: var(--brand-pale);
+      border-radius: 0 12px 12px 0;
+    }
+    .alert {
+      background: var(--warning);
+      border: 1px solid #f1d6b2;
+      border-left: 5px solid var(--warning-border);
+      border-radius: 12px;
+      padding: 18px 20px;
+      margin: 22px 0;
+    }
+    .alert h3 { margin-top: 0; }
+    ul, ol { padding-left: 1.35rem; margin: 8px 0 20px; }
+    li { margin: 0 0 8px; padding-left: 2px; }
+    .toc-title { margin: 0 0 12px; font-size: 1.05rem; }
+    .toc { padding-left: 18px; margin: 0; font-size: .92rem; line-height: 1.5; }
+    .toc li { margin-bottom: 10px; }
+    .toc a { text-decoration: none; }
+    .toc a:hover { text-decoration: underline; }
+    .table-wrap { overflow-x: auto; margin: 18px 0 24px; }
+    table { border-collapse: collapse; width: 100%; min-width: 520px; font-size: .94rem; }
+    th, td { text-align: left; padding: 13px 14px; border-bottom: 1px solid var(--line); vertical-align: top; }
+    th { background: var(--brand-pale); color: var(--brand-dark); font-weight: 750; }
+    tr:last-child td { border-bottom: 0; }
+    .faq-item { border: 1px solid var(--line); border-radius: 12px; padding: 0 16px; margin: 12px 0; }
+    .faq-item summary { cursor: pointer; font-weight: 750; padding: 16px 24px 16px 0; position: relative; }
+    .faq-item summary::marker { color: var(--brand); }
+    .faq-answer { padding: 0 0 16px; color: #3e4d55; }
+    .cta {
+      margin-top: 34px;
+      padding: 24px;
+      background: linear-gradient(135deg, #eaf5f2, #f6fbf9);
+      border: 1px solid #d6e9e4;
+      border-radius: 14px;
+    }
+    .cta h2 { margin: 0 0 12px; padding: 0; font-size: 1.45rem; }
+    .link-list li { margin-bottom: 12px; }
+    .small { color: var(--muted); font-size: .9rem; }
+    .footer {
+      background: #e8f0ee;
+      border-top: 1px solid var(--line);
+      color: var(--muted);
+      padding: 24px;
+      text-align: center;
+      font-size: .9rem;
+    }
+    .schema-note { font-size: .88rem; color: var(--muted); }
+    code { background: #f0f4f3; padding: 2px 5px; border-radius: 5px; }
+    @media (max-width: 850px) {
+      .layout { grid-template-columns: 1fr; }
+      aside { position: static; order: -1; }
+      .toc { columns: 2; }
+    }
+    @media (max-width: 520px) {
+      .header-inner, .layout { width: min(100% - 20px, 1120px); }
+      .site-header { padding: 14px 10px; }
+      main { padding: 22px 18px; }
+      aside { padding: 18px; }
+      .toc { columns: 1; }
+      body { font-size: 15.5px; }
+    }
+    @media print {
+      body { background: #fff; }
+      .site-header { background: #fff; color: var(--ink); border-bottom: 1px solid #ccc; }
+      .layout { display: block; width: 100%; padding: 0; }
+      main, aside { box-shadow: none; border: 0; }
+      aside { display: none; }
+      a { color: inherit; }
+    }
+  </style>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "Abortion Pill Effectiveness: How to Know If Misoprostol Worked",
+    "description": "Learn how abortion pill effectiveness is assessed, why misoprostol may not work, what no bleeding means, and when to seek medical care.",
+    "mainEntityOfPage": {
+      "@type": "WebPage",
+      "@id": "https://serenitychoicehealth.com/abortion-pill-effectiveness-misoprostol-failure/"
+    },
+    "author": {
+      "@type": "Person",
+      "name": "Dr. James Carter"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Serenity Choice Health",
+      "url": "https://serenitychoicehealth.com/"
+    }
+  }
+  </script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="header-inner">
+      <div class="brand">
+        <span class="brand-mark" aria-hidden="true">+</span>
+        <span>Serenity Choice Health</span>
+      </div>
+    </div>
+  </header>
+
+  <div class="layout">
+    <main>
+      <p class="eyebrow">Reproductive Health Guide</p>
+      <h1>Abortion Pill Effectiveness: How to Know If Misoprostol Worked</h1>
+      <div class="meta-row">
+        <span class="chip">Patient education</span>
+        <span class="chip">Medication abortion</span>
+        <span class="chip">Safety &amp; follow-up</span>
+      </div>
+
+      <p class="intro">Medication abortion is a commonly used method of ending an early pregnancy. It typically involves two medicines, mifepristone and misoprostol, although some protocols use misoprostol alone. Most medication abortions are successful, but some patients experience uncertainty about bleeding, cramping, or whether the pregnancy has ended.</p>
+      <p>Understanding <strong>abortion pill effectiveness</strong> can help you recognize what to expect, identify possible signs of treatment failure, and know when medical follow-up may be necessary. For example, having little or no bleeding after misoprostol can raise concerns, but symptoms alone cannot determine whether an abortion is complete.</p>
+      <p>Serenity Choice Health aims to help patients understand reproductive healthcare options through clear, patient-focused information. This guide explains how medication abortion works, what may indicate success or failure, how completion can be confirmed, and which warning signs require urgent medical attention.</p>
+
+      <div class="callout"><strong>Important:</strong> Symptoms alone cannot confirm that an abortion is complete. Follow the aftercare instructions for your specific medication regimen, and contact a qualified healthcare professional if the outcome is uncertain.</div>
+
+      <h2 id="effectiveness">How Effective Are Abortion Pills?</h2>
+      <p>Medication abortion is highly effective when the appropriate medicines are used according to an evidence-based regimen. Effectiveness depends on factors such as the medicines used, the duration of pregnancy, and whether the recommended protocol is followed.</p>
+      <p>The two medicines in the commonly used combination regimen have different roles:</p>
+      <ul>
+        <li><strong>Mifepristone:</strong> Blocks progesterone, a hormone needed to maintain pregnancy.</li>
+        <li><strong>Misoprostol:</strong> Causes the uterus to contract and helps expel the pregnancy tissue.</li>
+      </ul>
+      <p>Using mifepristone and misoprostol together is more effective than using misoprostol alone. However, neither regimen guarantees success in every case. Some patients may experience an ongoing pregnancy or an incomplete abortion that requires additional assessment or treatment.</p>
+
+      <h3>What affects abortion pill effectiveness?</h3>
+      <ul>
+        <li><strong>Pregnancy duration:</strong> Effectiveness can vary with gestational age, and the risk of an ongoing pregnancy increases as pregnancy advances within the period studied.</li>
+        <li><strong>Medication regimen:</strong> The combination of mifepristone and misoprostol is generally more effective than misoprostol alone.</li>
+        <li><strong>Correct use:</strong> The prescribed dose, timing, and method of taking the medicines matter.</li>
+        <li><strong>Medication quality:</strong> Medicines should come from a reliable source and be stored according to their instructions.</li>
+        <li><strong>Individual circumstances:</strong> Certain medical conditions, possible ectopic pregnancy, and other clinical factors may affect treatment planning and safety.</li>
+      </ul>
+      <p>If you are uncertain about your medication instructions or think a dose was not taken as directed, contact your healthcare provider for individualized guidance rather than assuming the treatment has failed.</p>
+
+      <h2 id="signs">Signs That the Abortion Pill May Be Working</h2>
+      <p>After taking misoprostol, many patients experience cramping and vaginal bleeding as the uterus expels pregnancy tissue. Other effects may include blood clots, nausea, diarrhea, chills, or a temporary fever.</p>
+      <p>The timing and intensity of these effects vary. Some people experience heavier bleeding and stronger cramps, while others have a different symptom pattern.</p>
+      <p>Common signs that may be consistent with a successful medication abortion include:</p>
+      <ul>
+        <li>Vaginal bleeding, sometimes heavier than a menstrual period.</li>
+        <li>Cramping that may intensify during the passage of pregnancy tissue.</li>
+        <li>Blood clots or tissue passing through the vagina.</li>
+        <li>A gradual reduction in pregnancy-related symptoms, such as nausea or breast tenderness.</li>
+        <li>Cramping and bleeding that ease over time after the main process.</li>
+      </ul>
+      <p>These signs can provide useful information about what is happening, but <strong>they do not independently confirm that the abortion is complete</strong>.</p>
+      <p>For a more detailed explanation of expected symptoms, read <a href="https://serenitychoicehealth.com/7-signs-abortion-pill-is-working/">the guide to signs that abortion pills may be working</a>. It can help you understand common changes without relying on any single symptom as proof of success.</p>
+
+      <h2 id="no-bleeding">What Does It Mean If There Is No Bleeding After Misoprostol?</h2>
+      <p>Little or no bleeding after misoprostol is one of the main reasons patients worry about medication abortion failure.</p>
+      <p>Bleeding commonly occurs after misoprostol, so the absence of bleeding may indicate that the medicines have not worked as expected. However, it is not possible to identify the cause from this symptom alone.</p>
+      <p>Possible explanations include:</p>
+      <ul>
+        <li>The medication has not produced the expected response.</li>
+        <li>The pregnancy is continuing.</li>
+        <li>The timing of the response differs from what was expected.</li>
+        <li>The pregnancy may be ectopic, meaning it is developing outside the uterus.</li>
+      </ul>
+      <p>An ectopic pregnancy is particularly important to consider because abortion pills do not treat it, and it can become life-threatening if it ruptures. Some patients with an ectopic pregnancy may experience vaginal bleeding, so bleeding itself does not rule it out.</p>
+
+      <h3>How long should you wait for bleeding?</h3>
+      <p>Follow the instructions supplied with your medication and contact your abortion provider if bleeding does not begin within the expected timeframe. If you have taken misoprostol and have no bleeding or only minimal spotting, seek prompt clinical advice rather than repeatedly taking medication without guidance.</p>
+      <p>Do not wait for bleeding to begin if you develop severe abdominal pain, fainting, marked dizziness, or other emergency symptoms.</p>
+      <p>For more specific information, visit <a href="https://serenitychoicehealth.com/no-bleeding-after-misoprostol/">this guide to what to do when bleeding does not start after misoprostol</a>.</p>
+
+      <h2 id="failure">What Is Misoprostol Failure?</h2>
+      <p>Misoprostol failure means that the medicine has not produced the intended result. Depending on the regimen used, the outcome may be an ongoing pregnancy or an incomplete abortion in which some pregnancy tissue remains.</p>
+      <p>These outcomes are different and may require different approaches to follow-up and treatment.</p>
+
+      <h3>1. Ongoing pregnancy</h3>
+      <p>An ongoing pregnancy means the pregnancy has not ended after medication abortion. Possible clues include:</p>
+      <ul>
+        <li>No bleeding or only minimal bleeding after treatment.</li>
+        <li>Pregnancy symptoms that persist or become more noticeable.</li>
+        <li>A pregnancy test that remains positive at a time when follow-up testing should show a decline in pregnancy hormone levels.</li>
+      </ul>
+      <p>None of these findings alone proves that a pregnancy is continuing. Pregnancy hormones can take time to fall, and some symptoms can persist during recovery.</p>
+      <p>If pregnancy is confirmed to be ongoing after medication abortion, a clinician can discuss appropriate next steps and available options.</p>
+
+      <h3>2. Incomplete abortion</h3>
+      <p>An incomplete abortion occurs when the pregnancy has ended but not all pregnancy tissue has passed. Symptoms may include prolonged or irregular bleeding, persistent cramping, or other ongoing symptoms.</p>
+      <p>Some cases resolve without a procedure, while others may require additional medication or uterine aspiration. The appropriate approach depends on the clinical assessment, symptoms, and patient preferences.</p>
+
+      <h3>3. Why might misoprostol not work as expected?</h3>
+      <p>Possible explanations include an unsuitable regimen, incorrect timing or administration, or differences in how an individual responds to treatment. Sometimes, the reason is not immediately clear.</p>
+      <p>It is important not to conclude that treatment failed simply because bleeding or cramping was lighter than expected. Clinical evaluation may be needed to distinguish delayed bleeding, an incomplete abortion, and an ongoing or ectopic pregnancy.</p>
+      <p>For further information, read <a href="https://serenitychoicehealth.com/what-makes-misoprostol-fail/">what may cause misoprostol to fail</a>. The guide can help you understand possible reasons and when to seek an assessment.</p>
+
+      <h2 id="confirmation">How Can You Confirm Whether an Abortion Is Complete?</h2>
+      <p>The most reliable approach is to follow the recommended aftercare instructions and use an appropriate method of confirmation when needed. The right method depends on the medicines used, the timing of treatment, symptoms, and the patient's medical circumstances.</p>
+
+      <h3>Clinical assessment</h3>
+      <p>A healthcare professional may review your symptoms, medication history, bleeding pattern, and pregnancy-related changes. This information can help determine whether additional testing is necessary.</p>
+
+      <h3>Pregnancy testing</h3>
+      <p>A pregnancy test may remain positive for a period after a successful medication abortion because human chorionic gonadotropin (hCG), the pregnancy hormone, takes time to decline.</p>
+      <p>Use the timing and type of pregnancy test recommended by your provider. A positive test taken too soon does not automatically mean the abortion failed, but a positive result at the recommended follow-up point may require further assessment.</p>
+
+      <h3>Blood hCG testing</h3>
+      <p>A clinician may compare hCG blood levels measured at different times. The pattern of change can help assess whether a pregnancy is resolving, although interpretation depends on the clinical situation.</p>
+
+      <h3>Ultrasound</h3>
+      <p>An ultrasound may be appropriate when the outcome is uncertain, pregnancy symptoms persist, bleeding is minimal, or an ectopic pregnancy is suspected. It can help determine whether a pregnancy is ongoing and whether further care is needed.</p>
+      <p>Routine in-person follow-up is not necessary for every uncomplicated medication abortion, but follow-up should be available when clinically indicated or preferred by the patient. The FDA-approved regimen includes provider follow-up approximately 7–14 days after mifepristone; other evidence-based care pathways may use individualized follow-up instructions.</p>
+
+      <h2 id="safety">Is the Abortion Pill Safe?</h2>
+      <p>Medication abortion has a well-established safety profile when used appropriately, but it is not free from risks. Common side effects include cramping, bleeding, nausea, vomiting, diarrhea, chills, and temporary fever.</p>
+      <p>Most side effects improve as the abortion process progresses. More serious complications, such as very heavy bleeding, infection, an ongoing pregnancy, or an ectopic pregnancy, require appropriate medical attention.</p>
+
+      <div class="alert" role="note" aria-label="Urgent medical warning signs">
+        <h3>Warning signs that require urgent medical care</h3>
+        <p>Seek emergency medical care if you experience any of the following:</p>
+        <ul>
+          <li><strong>Very heavy bleeding:</strong> Soaking more than two full-size sanitary pads per hour for two consecutive hours.</li>
+          <li><strong>Severe or worsening abdominal pain:</strong> Particularly severe one-sided pain or pain accompanied by dizziness or fainting.</li>
+          <li><strong>Fainting or significant weakness:</strong> These may indicate serious blood loss or another emergency.</li>
+          <li><strong>Persistent fever or feeling seriously unwell:</strong> Especially fever or flu-like symptoms that develop or continue more than 24 hours after misoprostol.</li>
+          <li><strong>Foul-smelling vaginal discharge:</strong> Particularly when accompanied by fever, worsening pain, or feeling unwell.</li>
+        </ul>
+        <p>Do not wait for every symptom to appear before seeking help. If you have sudden severe pain, fainting, or symptoms that suggest an ectopic pregnancy, get emergency care immediately.</p>
+      </div>
+
+      <h3>Can anemia affect abortion pill safety?</h3>
+      <p>Anemia can be relevant because medication abortion causes bleeding, and patients with low hemoglobin may have less reserve if significant blood loss occurs. The degree of risk depends on the severity of anemia and other individual factors.</p>
+      <p>If you have diagnosed anemia, a history of significant bleeding, or a blood disorder, discuss your medical history with a qualified clinician before treatment so that appropriate care and emergency planning can be considered.</p>
+      <p>For more information, read <a href="https://serenitychoicehealth.com/can-anemia-affect-abortion-pill-safety/">how anemia may affect abortion pill safety</a>.</p>
+
+      <h2 id="ongoing-pregnancy">Can a Pregnancy Continue After Taking Misoprostol?</h2>
+      <p>Yes. Although medication abortion is generally effective, an ongoing pregnancy is possible when treatment does not succeed.</p>
+      <p>If a pregnancy continues after exposure to misoprostol, prompt clinical follow-up is important. Misoprostol exposure during an ongoing pregnancy has been associated with a risk of certain congenital abnormalities. This does not mean that an abnormality will necessarily occur, but it makes individualized medical counseling and appropriate follow-up important.</p>
+      <p>A clinician can assess whether the pregnancy is ongoing, explain the potential risks, and discuss available options without pressure or judgment.</p>
+      <p>You can also explore <a href="https://serenitychoicehealth.com/can-a-fetus-survive-after-taking-misoprostol/">what it means if a pregnancy continues after misoprostol</a>.</p>
+
+      <h2 id="next-steps">What Should You Do If You Think the Abortion Pill Failed?</h2>
+      <p>If you suspect that medication abortion has not worked, take the following steps:</p>
+      <ol>
+        <li><strong>Review your aftercare instructions.</strong> Check the expected timing of bleeding, symptom changes, and follow-up testing for your specific regimen.</li>
+        <li><strong>Contact your healthcare provider.</strong> Report whether you had bleeding, how much cramping you experienced, when you took each medicine, and whether pregnancy symptoms continue.</li>
+        <li><strong>Arrange an assessment if needed.</strong> Depending on your symptoms, your provider may recommend pregnancy testing, hCG blood tests, or an ultrasound.</li>
+        <li><strong>Avoid taking additional doses without appropriate guidance.</strong> The next step depends on the regimen used and whether the pregnancy is ongoing or incomplete.</li>
+        <li><strong>Seek emergency care for warning signs.</strong> Severe pain, fainting, or very heavy bleeding should not wait for a routine appointment.</li>
+      </ol>
+      <p>Depending on the findings and your preferences, further management may include expectant care, additional medication, or a procedure. An ongoing pregnancy and an incomplete abortion should not automatically be managed in the same way.</p>
+
+      <h2 id="reliable-care">Getting Reliable Abortion Aftercare Information</h2>
+      <p>Questions about medication abortion can feel stressful, particularly when bleeding or other symptoms do not match expectations. Reliable aftercare information can help you understand what may be normal, recognize when assessment is needed, and avoid drawing conclusions from symptoms alone.</p>
+      <p>Serenity Choice Health provides information about reproductive healthcare and women's health services. If you have concerns about abortion pill effectiveness, no bleeding after misoprostol, or possible treatment failure, seek individualized advice from a qualified healthcare professional who can assess your symptoms and recommend appropriate follow-up.</p>
+         <p>Read Also: <a href="https://serenitychoice.neocities.org/">Emergency Contraception vs. Abortion Pills</a></p>
+      <div class="callout"><strong>Your safety matters more than trying to determine success from symptoms alone.</strong> When the outcome is uncertain, appropriate clinical assessment is the best way to establish what is happening and determine whether further care is needed.</div>
+
+      <section id="faq" aria-labelledby="faq-heading">
+        <h2 id="faq-heading">Frequently Asked Questions About Abortion Pill Effectiveness and Safety</h2>
+        <details class="faq-item">
+          <summary>1. How effective are abortion pills?</summary>
+          <div class="faq-answer"><p>Medication abortion is highly effective, particularly when mifepristone and misoprostol are used together according to an evidence-based regimen. However, an ongoing pregnancy or incomplete abortion can occur, so follow-up is important when symptoms or test results raise concerns.</p></div>
+        </details>
+        <details class="faq-item">
+          <summary>2. Does no bleeding after misoprostol mean the abortion pill failed?</summary>
+          <div class="faq-answer"><p>No bleeding may indicate that the treatment has not worked as expected, but it does not establish the cause. An ongoing pregnancy, delayed response, or ectopic pregnancy may need to be considered. Contact your provider promptly for advice.</p></div>
+        </details>
+        <details class="faq-item">
+          <summary>3. How can I tell if misoprostol did not work?</summary>
+          <div class="faq-answer"><p>No or minimal bleeding, persistent pregnancy symptoms, and concerning follow-up test results can indicate that further evaluation is needed. However, symptoms alone cannot confirm failure. A clinician may recommend pregnancy testing, hCG testing, or ultrasound.</p></div>
+        </details>
+        <details class="faq-item">
+          <summary>4. Can a pregnancy continue after taking abortion pills?</summary>
+          <div class="faq-answer"><p>Yes. An ongoing pregnancy is possible even after medication abortion. If you suspect that your pregnancy is continuing, seek clinical assessment. Misoprostol exposure during an ongoing pregnancy warrants counseling about potential risks and appropriate follow-up.</p></div>
+        </details>
+        <details class="faq-item">
+          <summary>5. When should I seek emergency care after taking abortion pills?</summary>
+          <div class="faq-answer"><p>Seek emergency care for very heavy bleeding, fainting, severe or worsening abdominal pain, or other signs of a serious complication. Fever or flu-like symptoms that persist or develop more than 24 hours after misoprostol, particularly with worsening pain or feeling unwell, also require prompt medical evaluation.</p></div>
+        </details>
+        <details class="faq-item">
+          <summary>6. Do I need an ultrasound to confirm that the abortion is complete?</summary>
+          <div class="faq-answer"><p>Not always. Depending on your circumstances, completion may be assessed through symptoms, appropriately timed pregnancy testing, blood hCG measurements, or ultrasound. A clinician can help determine which approach is appropriate.</p></div>
+        </details>
+      </section>
+
+      <section class="cta">
+        <h2>Need guidance about medication abortion aftercare?</h2>
+        <p>If you are concerned about no bleeding after misoprostol, ongoing pregnancy symptoms, or possible treatment failure, contact a qualified healthcare professional for personalized advice. Seek emergency care for severe pain, fainting, or very heavy bleeding.</p>
+        <p class="small">This article is for educational purposes and is not a substitute for individual medical advice, diagnosis, or emergency care.</p>
+      </section>
+
+     
+    </main>
+
+    <aside aria-label="Article navigation">
+      <h2 class="toc-title">In this article</h2>
+      <nav>
+        <ol class="toc">
+          <li><a href="#effectiveness">Abortion pill effectiveness</a></li>
+          <li><a href="#signs">Signs it may be working</a></li>
+          <li><a href="#no-bleeding">No bleeding after misoprostol</a></li>
+          <li><a href="#failure">Misoprostol failure</a></li>
+          <li><a href="#confirmation">Confirming completion</a></li>
+          <li><a href="#safety">Safety and warning signs</a></li>
+          <li><a href="#ongoing-pregnancy">Ongoing pregnancy</a></li>
+          <li><a href="#next-steps">What to do next</a></li>
+          <li><a href="#reliable-care">Reliable aftercare</a></li>
+          <li><a href="#faq">Frequently asked questions</a></li>
+          <li><a href="#related-reading">Related reading</a></li>
+        </ol>
+      </nav>
+      <hr style="border:0;border-top:1px solid var(--line);margin:22px 0">
+      <p class="small"><strong>Medical reminder</strong><br>Symptoms alone cannot confirm abortion completion. Seek professional advice when the outcome is uncertain.</p>
+    </aside>
+  </div>
+
+  <footer class="footer">
+    <p><strong>Serenity Choice Health</strong></p>
+    <p>Educational information about reproductive health and medication abortion aftercare.</p>
+  </footer>
+</body>
+</html>
+
